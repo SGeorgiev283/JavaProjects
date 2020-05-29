@@ -103,32 +103,6 @@ public class F181217009
       dd.add(new JScrollPane(t1),BorderLayout.NORTH);
       }
       });
-      scalarmultiplier.addActionListener(new ActionListener() {
-  public void actionPerformed(ActionEvent event) {
-      JFrame dd=new JFrame("Матрици умножени с число");
-      Scanner input=new Scanner(System.in);
-        System.out.println("Number to multiply by ");
-        double number=input.nextDouble();
-      matrix c=matrix.ScalarMul(number, a);
-      matrix d=matrix.ScalarMul(number,b);
-      dd.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-      dd.setVisible(true);
-      dd.setSize(200,200);
-      String[] s1=new String[c.array[0].length];
-      for(int i=1;i<s1.length+1;i++)
-      {
-          s1[i-1]="Колона А"+i;
-      }
-      JTable t1=new JTable(c.array,s1);
-      String[] s2=new String[d.array[0].length];
-      for(int i=1;i<s2.length+1;i++){
-          s2[i-1]="Колона Б"+i;
-      }
-      JTable t2=new JTable(d.array,s2);
-      dd.add(new JScrollPane(t2),BorderLayout.CENTER);
-      dd.add(new JScrollPane(t1),BorderLayout.NORTH);
-      }
-      });
       AxB.addActionListener(new ActionListener() {
   public void actionPerformed(ActionEvent event) {
       JFrame dd=new JFrame("Матрица А умножена по матрица Б");
